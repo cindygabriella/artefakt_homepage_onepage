@@ -34,7 +34,6 @@
 
   <div id="main">
     <div class="header">
-
       <a class="header-link" href="index.html"><img src="images/logo.png" height="70" width="70"></a>
       <p class="opener"> <span class="menue"
           style="font-size:25px;text-decoration:underline;cursor:pointer;margin-left:30px;display: inline-block"
@@ -43,7 +42,7 @@
 
     <div id="fullpage">
 
-    <div class="section" style="background-color: white;">
+    <div class="section">
     <div class="hintergrund">
       <h1>PLASTIC, PLASTIC, PLASTIC</h1>
       <h2>Wie viel Plastik und Abfall produzieren wir? </h2>
@@ -51,7 +50,7 @@
     </div>
     <div id="grafik1" style="position: relative;"></div>
     <script src="js/sketch1.js"></script>
-    <br><br></div>
+  </div>
 
     <div class="section">
     <div class="hintergrund"><h1>HOW MUCH OF GLOBAL PLASTIC IS RECYCLED?</h1></div>
@@ -92,7 +91,7 @@
   	autoScrolling: true,
   	fitToSection: true,
   	fitToSectionDelay: 1000,
-  	scrollBar: false,
+  	scrollBar: true,
   	easing: 'easeInOutCubic',
   	easingcss3: 'ease',
   	loopBottom: false,
@@ -119,10 +118,10 @@
   	recordHistory: true,
 
   	//Design
+    sectionsColor: ['#FFFFFF'],
   	controlArrows: true,
   	verticalCentered: true,
-  	sectionsColor : ['#ccc', '#fff'],
-  	paddingTop: '3em',
+  	paddingTop: '0px',
   	paddingBottom: '10px',
   	fixedElements: '#header, .footer',
   	responsiveWidth: 0,
