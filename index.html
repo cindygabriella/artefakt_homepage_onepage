@@ -43,18 +43,12 @@
 
     <div id="fullpage">
 
-    <div class="section">
+    <div class="section" style="background-color: white;">
     <div class="hintergrund">
       <h1>PLASTIC, PLASTIC, PLASTIC</h1>
       <h2>Wie viel Plastik und Abfall produzieren wir? </h2>
       <p class="text">Waren es 1950 noch «lediglich» weltweit 2 Millionen Tonnen/Jahr, ist die jährliche Produktion 2015 mit 381 Millionen Tonnen/Jahr bereits um das fast 200-fache gestiegen. Dies entspricht etwa der Masse von 2/3 der Weltbevölkerung. Zwischen 1950 – 2015 hat die kumulative Produktion 7.8 Billionen Tonnen Plastik erreicht, mehr als eine Tonne pro lebende Person.</p>
-    </div></div>
-
-    <br>
-
-    <!-- <p style="margin-left:30px;">Grafik 1 - Supply and Demand // Angebot und Nachfrage <br> Manipulation: verkürzte Y-Achsenwerte</p> -->
-    <!-- style="position: relative;" damit die Slider position relative to #grafik1 platziert wird -->
-    <div class="section">
+    </div>
     <div id="grafik1" style="position: relative;"></div>
     <script src="js/sketch1.js"></script>
     <br><br></div>
@@ -80,14 +74,81 @@
   </div>
 
   <script>
-  new fullpage('#fullpage', {
-	//options here
-	autoScrolling:true,
-	scrollHorizontally: true
-  });
+  var myFullpage = new fullpage('#fullpage', {
+  	//Navigation
+  	menu: '#menu',
+  	lockAnchors: false,
+  	anchors:['firstPage', 'secondPage', 'thirdPage'],
+  	navigation: false,
+  	navigationPosition: 'right',
+  	navigationTooltips: ['firstSlide', 'secondSlide'],
+  	showActiveTooltip: false,
+  	slidesNavigation: false,
+  	slidesNavPosition: 'bottom',
 
-  //methods
-  fullpage_api.setAllowScrolling(false);
+  	//Scrolling
+  	css3: true,
+  	scrollingSpeed: 700,
+  	autoScrolling: true,
+  	fitToSection: true,
+  	fitToSectionDelay: 1000,
+  	scrollBar: false,
+  	easing: 'easeInOutCubic',
+  	easingcss3: 'ease',
+  	loopBottom: false,
+  	loopTop: false,
+  	loopHorizontal: true,
+  	continuousVertical: false,
+  	continuousHorizontal: false,
+  	scrollHorizontally: false,
+  	interlockedSlides: false,
+  	dragAndMove: false,
+  	offsetSections: false,
+  	resetSliders: false,
+  	fadingEffect: false,
+  	normalScrollElements: '#element1, .element2',
+  	scrollOverflow: false,
+  	scrollOverflowReset: false,
+  	scrollOverflowOptions: null,
+  	touchSensitivity: 15,
+  	bigSectionsDestination: null,
+
+  	//Accessibility
+  	keyboardScrolling: true,
+  	animateAnchor: true,
+  	recordHistory: true,
+
+  	//Design
+  	controlArrows: true,
+  	verticalCentered: true,
+  	sectionsColor : ['#ccc', '#fff'],
+  	paddingTop: '3em',
+  	paddingBottom: '10px',
+  	fixedElements: '#header, .footer',
+  	responsiveWidth: 0,
+  	responsiveHeight: 0,
+  	responsiveSlides: false,
+  	parallax: false,
+  	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+  	cards: false,
+  	cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+  	//Custom selectors
+  	sectionSelector: '.section',
+  	slideSelector: '.slide',
+
+  	lazyLoading: true,
+
+  	//events
+  	onLeave: function(origin, destination, direction){},
+  	afterLoad: function(origin, destination, direction){},
+  	afterRender: function(){},
+  	afterResize: function(width, height){},
+  	afterReBuild: function(){},
+  	afterResponsive: function(isResponsive){},
+  	afterSlideLoad: function(section, origin, destination, direction){},
+  	onSlideLeave: function(section, origin, destination, direction){}
+  });
 
   </script>
 
